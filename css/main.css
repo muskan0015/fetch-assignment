@@ -1,0 +1,221 @@
+/*
+
+CSS Reset
+Adapted from: https://piccalil.li/blog/a-more-modern-css-reset/
+
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ol,
+ul,
+dl,
+dd {
+    margin: 0 0 1.5rem;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: #36BF7F;
+}
+
+a:not([class]):hover,
+a:not([class]):focus-visible {
+    color: #D96666;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+svg {
+    fill: currentColor;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Update default button cursor to indicate interactivity */
+button {
+    cursor: pointer;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 3rem;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+/* all the styles are there */
+
+.public{
+    
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #20997d;
+    color: #fff;
+    padding: 0.625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 span {
+    font-weight: bold;
+    color: #ff9800;
+}
+
+nav.logout {
+    display: none;
+}
+
+main {
+    padding: 1.25rem;
+}
+
+#public,
+#authorized {
+    display: none;
+}
+
+#public.active,
+#authorized.active {
+    display: block;
+}
+
+.loading {
+    text-align: center;
+    padding: 1.25rem;
+}
+
+.loaded {
+    padding: 1.25rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    margin-top: 1.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+dialog {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    background: #e50a0a;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+    color: #f4f4f4;
+}
+
+dialog button {
+    margin-top: 0.625rem;
+    padding: 0.3125rem 0.625rem;
+    background-color: #110f0f;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    color: rgb(61, 61, 98);
+}
+
+#logout {
+    color: #f4f4f4;
+}
+
+#btnLogin {
+    background-color: lightgrey;
+    font-size: 1rem;
+    padding-inline:1rem;
+
+}
